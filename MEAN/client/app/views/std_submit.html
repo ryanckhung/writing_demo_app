@@ -1,0 +1,38 @@
+<div>
+    
+    <div style="margin-left:25px; margin-top:25px">
+        <div>
+            <span style="font-size:22px; font-weight:bold; margin-right:15px"><a ui-sref="app.stdsubmit">Submit</a></span>
+            <span style="font-size:22px; font-weight:bold; margin-right:15px"><a ui-sref="app.stdall">Review</a></span>
+            <span style="font-size:22px; font-weight:bold"><a ng-click="logout()">Logout</a></span>
+        </div>
+        <div>
+            <span style="font-size:18px;">User: {{userName}}</span>
+        </div>
+    </div>
+
+    <div style="margin-left:25px; margin-top:15px; width:706px; border-style:solid; border-color:#eeeeee; border-width:2px">
+        <div style="margin:20px">
+            <h3>Submit your writing</h3>
+            <form>
+
+                <div class="form-group">
+                    <textarea rows="10" cols="80" ng-model="content" placeholder="please edit your content" ng-change="textAreaChange()">
+                    </textarea>
+                </div>
+
+                <div style="margin-bottom:30px">
+                    Number of Words: {{num_of_word}} 
+                </div>
+
+                <button type="submit" class="btn btn-default" ng-click="submit()">Submit</button>
+            </form>
+
+            <div class="alert alert-warning" role="alert" style="margin-bottom:0px;margin-top:20px;text-align:center" ng-show="errMsg.isShow">
+                {{errMsg.msg}}
+            </div>
+        </div>
+    </div>
+
+    
+</div>

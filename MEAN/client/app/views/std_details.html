@@ -1,0 +1,34 @@
+<div>
+    
+    <div style="margin-left:25px; margin-top:25px">
+        <div>
+            <span style="font-size:22px; font-weight:bold; margin-right:15px"><a ui-sref="app.stdsubmit">Submit</a></span>
+            <span style="font-size:22px; font-weight:bold; margin-right:15px"><a ui-sref="app.stdall">Review</a></span>
+            <span style="font-size:22px; font-weight:bold"><a ng-click="logout()">Logout</a></span>
+        </div>
+        <div>
+            <span style="font-size:18px;">User: {{userName}}</span>
+        </div>
+    </div>
+    
+    <div style="margin-left:25px; margin-top:25px">
+        <div style="float:left; width:400px; height:800px; border-style:solid; border-width:1px; border-color:#eeeeee;">
+            <div style="margin:20px">
+                <div style="font-weight:bold">Content: </div>
+                <div>Created at: {{details.createdAt | date: 'yyyy/MM/dd'}}</div>
+                <div>Number or words: {{details.num_of_word}}</div>
+                <div style="margin-top:25px">
+                    {{details.content}}
+                </div>
+            </div>
+        </div>
+        <div style="float:left; width:400px; height:800px; margin-left:25px; border-style:solid; border-width:1px; border-color:#eeeeee;">
+            <div style="margin:20px">
+                <div style="font-weight:bold">Graded Content:</div>
+                <div ng-show="details.is_graded==false">Not yet graded</div>
+                <div ng-show="details.is_graded==true" style="margin-top:25px">{{details.graded_content}}</div>
+            </div>
+        </div>
+    </div>
+    
+</div>

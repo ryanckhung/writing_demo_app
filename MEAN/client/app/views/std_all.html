@@ -1,0 +1,34 @@
+<div>
+    
+    <div style="margin-left:25px; margin-top:25px">
+        <div>
+            <span style="font-size:22px; font-weight:bold; margin-right:15px"><a ui-sref="app.stdsubmit">Submit</a></span>
+            <span style="font-size:22px; font-weight:bold; margin-right:15px"><a ui-sref="app.stdall">Review</a></span>
+            <span style="font-size:22px; font-weight:bold"><a ng-click="logout()">Logout</a></span>
+        </div>
+        <div>
+            <span style="font-size:18px;">User: {{userName}}</span>
+        </div>
+    </div>
+    
+    <div style="margin-left:25px; margin-right:25px; margin-top:25px;">
+        <table class="table table-striped">
+            <tr>
+                <th>Content</th>
+                <th>Created At</th>
+                <th>Graded</th>
+            </tr>
+            <tr ng-repeat="list in writingList" ng-click="tableRowClicked(list)" style="cursor: pointer;">
+                <td>{{list.content | limitTo: 30}} {{list.content.length > 30 ? '...':''}}</td>
+                <td>{{list.createdAt | date: 'yyyy/MM/dd'}}</td>
+                <td>{{list.is_graded}}</td>
+            </tr>
+            <tr ng-show="writingList.length==0">
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+    </div>
+    
+</div>

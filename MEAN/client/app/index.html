@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- build:css styles/main.css -->		
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+        <link href="../bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="./styles/mystyle.css" rel="stylesheet">
+        <!-- endbuild -->
+		
+        
+    </head>
+    
+    <body ng-app="writing">
+        <div ui-view="content" autoscroll="true"></div>  
+    </body>
+	
+	
+	
+
+    <!-- build:js scripts/main.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+	
+    <!-- router.js is the first entry -->
+    <script src="scripts/router.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/services.js"></script>
+
+	<script src="./scripts/mainCtrl.js"></script>
+    <script src="./scripts/stdSubmitCtrl.js"></script>
+    <script src="./scripts/stdAllCtrl.js"></script>
+    <script src="./scripts/stdDetailsCtrl.js"></script>
+    <script src="./scripts/tutAllCtrl.js"></script>
+    <script src="./scripts/tutDetailsCtrl.js"></script>
+	<!-- endbuild -->
+	
+    
+    
+</html>

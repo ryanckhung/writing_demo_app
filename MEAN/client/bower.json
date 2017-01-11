@@ -1,0 +1,21 @@
+{
+  "name": "hw4_frontend",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "angular": "^1.6.1",
+    "angular-ui-router": "^0.3.2",
+    "angular-resource": "^1.6.1"
+  }
+}
