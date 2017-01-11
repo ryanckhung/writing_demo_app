@@ -13,3 +13,6 @@
 # ./MEAN/client/app/scripts/router.js is the entry code;
 # all the required module are stored in bower.json
 # after downloading the code, you need to run "bower install" to download all the required module
+
+# For Database:
+# Mongodb is used; please goto download the mongodb and make it up before you use with the server code
