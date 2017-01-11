@@ -20,6 +20,13 @@ angular.module('writing')
                     console.log("signup success");
                     sessionStorage.token = response.data.token;
                     sessionStorage.userInfo = atob(response.data.token.split('.')[1]);
+                    
+                    if (JSON.parse(sessionStorage.userInfo).isStudent){
+                        $state.go('app.stdsubmit');    
+                    }else{
+                        console.log("goto the teacher path");
+                        $state.go('app.tutall');
+                    }
                 }
             },
             function(response){
